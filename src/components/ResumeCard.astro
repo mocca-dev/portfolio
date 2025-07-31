@@ -1,0 +1,16 @@
+---
+import Card from './Card/index.astro';
+---
+
+<Card colSpan="lg:col-span-1" rowSpan="md:row-span-2" title="Resume">
+  <div class="flex mt-5 justify-center gap-10 w-full">
+    <a
+      href="/ResumeTonelli.pdf"
+      target="_blank"
+      class="flex flex-col items-center"
+      download
+    >
+      <img class="pdf-logo" src="/pdf.png" height="45px" width="45px" alt="" />
+    </a>
+  </div>
+</Card>

@@ -4,9 +4,7 @@
 
 ![astro-bento-portfolio | Bento-like Personal Porfolio Template](public/preview.png)
 
-To view a demo example, **[click here](https://sparkly-speculoos-0c9197.netlify.app/)**
-
-or my portfolio **[click here](https://nicolas.xyz/)**
+To view my portfolio **[click here](https://nicolastonelli.surge.sh)**
 
 ## Features
 
@@ -51,23 +49,3 @@ $ pnpm run dev
 or
 $ npm run dev
 ```
-
-## REMOVE THE umami analytics script tag (or replace it with your id) in `src/layouts/Layout.astro`
-
-# Configuration
-
-remember to replace the `site` and other properties with your data in `astro.config.mjs`
-
-# Deploy on Netlify 🚀
-
-Deploying your website on Netlify it's optional but I reccomand it in order to deploy it faster and easly.
-
-You just need to fork this repo and linking it to your Netlify account.
-
-or
-
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Ladvace/astro-bento-portfolio)
-
-## Authors ❤️
-
-- Nicolás - https://github.com/mocca-dev
