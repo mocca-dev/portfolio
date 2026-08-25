@@ -14,6 +14,7 @@ interface Props {
 }
 
 const { title, body, colSpan, rowSpan, href, colorText, height } = Astro.props;
+const hasTitleAction = Astro.slots.has("title-action");
 ---
 
 <div
@@ -30,12 +31,14 @@ const { title, body, colSpan, rowSpan, href, colorText, height } = Astro.props;
           name="ri:arrow-right-up-line"
           class="h-6 float-right group-hover:text-primary-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ease-in-out duration-100 z-20"
         />
-        <Content title={title} body={body}>
+        <Content title={title} body={body} hasTitleAction={hasTitleAction}>
+          {hasTitleAction && <slot name="title-action" slot="title-action" />}
           <slot />
         </Content>
       </a>
     ) : (
-      <Content title={title} body={body}>
+      <Content title={title} body={body} hasTitleAction={hasTitleAction}>
+        {hasTitleAction && <slot name="title-action" slot="title-action" />}
         <slot />
       </Content>
     )

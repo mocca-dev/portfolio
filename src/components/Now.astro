@@ -4,15 +4,8 @@ import Pulse from './Pulse.astro';
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="Now">
-  <div class="flex justify-between w-full items-start mb-2">
-    <div class="flex flex-col">
-      <!-- <a href="https://sive.rs/nowff" target="_blank">
-        <span class="text-xs text-gray-500 cursor-pointer">what's that ?</span>
-      </a> -->
-    </div>
-    <Pulse />
-  </div>
-  <p class="text-sm">
+  <Pulse slot="title-action" />
+  <p class="text-sm mt-2">
     Currently working at <a
       href="https://github.com/stars/mocca-dev/lists/portfolio"
       target="_blanck"
