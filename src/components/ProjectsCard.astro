@@ -5,10 +5,25 @@ import Card from './Card/index.astro';
 <Card
   colSpan="lg:col-span-2"
   rowSpan="md:row-span-2 gap-4"
-  title="My top 4 apps"
+  title="My top 5 apps"
 >
-  <div class="h-full">
-    <div class="flex mt-3 justify-center gap-10 w-full">
+  <div class="h-full overflow-x-auto">
+    <div class="flex mt-3 gap-10 w-max mx-auto pb-2 whitespace-nowrap">
+      <a
+        href="https://navcycle.surge.sh"
+        target="_blank"
+        class="flex flex-col items-center"
+      >
+        <img
+          class="app-logo"
+          src="/navcycle-logo.png"
+          height="35px"
+          width="35px"
+          alt=""
+          style="filter: drop-shadow(0px 0px 10px rgba(255,255,255,0.15))"
+        />
+        <h2>Navcycle</h2>
+      </a>
       <a
         href="https://stamps-one.vercel.app"
         target="_blank"
@@ -20,7 +35,7 @@ import Card from './Card/index.astro';
           height="35px"
           width="35px"
           alt=""
-          style="box-shadow: 0px 0px 10px 1px rgba(255,255,255,0.12)"
+          style="filter: drop-shadow(0px 0px 10px rgba(255,255,255,0.15))"
         />
         <h2>Stamps</h2>
       </a>
