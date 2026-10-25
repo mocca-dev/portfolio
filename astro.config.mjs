@@ -4,6 +4,7 @@ import netlify from '@astrojs/netlify';
 import robotsTxt from 'astro-robots-txt';
 import UnoCSS from '@unocss/astro';
 import icon from 'astro-icon';
+import { unified } from '@astrojs/markdown-remark';
 
 import solidJs from '@astrojs/solid-js';
 import { remarkReadingTime } from './src/lib/ remark-reading-time.mjs';
@@ -27,7 +28,7 @@ export default defineConfig({
     svelte(),
   ],
   markdown: {
-    remarkPlugins: [remarkReadingTime],
+    processor: unified({ remarkPlugins: [remarkReadingTime] }),
   },
   vite: {
     assetsInclude: '**/*.riv',

@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  return (await getCollection('blog')).map(({ slug }: any) => ({
-    params: { slug },
+  return (await getCollection('blog')).map(({ id }: any) => ({
+    params: { slug: id },
   }));
 }
 
@@ -21,12 +21,12 @@ const posts = (await getCollection('blog')).sort(
     (blogEntryA.data.pubDate || new Date()).getTime()
 );
 
-const entry = posts.find((entry: any) => entry.slug === slug);
+const entry = posts.find((entry: any) => entry.id === slug);
 if (entry === undefined) {
   return Astro.redirect('/404');
 }
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <Content />
